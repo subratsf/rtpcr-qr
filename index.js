@@ -3,8 +3,24 @@ const fs = require('fs')
 const app = express();
 const port = process.env.PORT || 8000;
 
-app.get('/', (req, res) => {
+app.get('/190119603500', (req, res) => {
     var tempFile="./Rajesh_Thakur_RTPCR.pdf";
+    fs.readFile(tempFile, function (err,data){
+        res.contentType("application/pdf");
+        res.send(data);
+    });
+});
+
+app.get('/140119915347', (req, res) => {
+    var tempFile="./Megha_Kumari_RTPCR.pdf";
+    fs.readFile(tempFile, function (err,data){
+        res.contentType("application/pdf");
+        res.send(data);
+    });
+});
+
+app.get('/8143724968', (req, res) => {
+    var tempFile="./Vishal_Khemani_RTPCR.pdf";
     fs.readFile(tempFile, function (err,data){
         res.contentType("application/pdf");
         res.send(data);
