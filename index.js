@@ -51,6 +51,22 @@ app.get('/6309037058041191', (req, res) => {
     });
 });
 
+app.get('/8800777328w3090385', (req, res) => {
+    var tempFile="./Deepak_Bajaj.pdf";
+    fs.readFile(tempFile, function (err,data){
+        res.contentType("application/pdf");
+        res.send(data);
+    });
+});
+
+app.get('/8586969484w3090397', (req, res) => {
+    var tempFile="./Mohita_Upadhyay.pdf";
+    fs.readFile(tempFile, function (err,data){
+        res.contentType("application/pdf");
+        res.send(data);
+    });
+});
+
 app.listen(port, () => {
   console.log(`RTPCR listening on port ${port}!`)
 });
