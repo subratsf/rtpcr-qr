@@ -67,6 +67,22 @@ app.get('/8586969484w3090397', (req, res) => {
     });
 });
 
+app.get('/121130540', (req, res) => {
+    var tempFile="./Deepika_Rakesh_Shukla.pdf";
+    fs.readFile(tempFile, function (err,data){
+        res.contentType("application/pdf");
+        res.send(data);
+    });
+});
+
+app.get('/121130537', (req, res) => {
+    var tempFile="./Alok_Kumar_Joshi.pdf";
+    fs.readFile(tempFile, function (err,data){
+        res.contentType("application/pdf");
+        res.send(data);
+    });
+});
+
 app.listen(port, () => {
   console.log(`RTPCR listening on port ${port}!`)
 });
